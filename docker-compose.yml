@@ -12,11 +12,11 @@ services:
 
   web: # アプリケーションサーバ用のコンテナの設定を記述
     build: . # docker-compose.ymlと同じ階層にあるDockerfileを使ってimageをbuildするための記述
-    command: bundle exec rails s -p 6000 -b '0.0.0.0' # コンテナ立ち上げ時に起動するコマンド。railsを実行する。
+    command: bundle exec rails s -p 7000 -b '0.0.0.0' # コンテナ立ち上げ時に起動するコマンド。railsを実行する。
 
     volumes:
       - .:/blog-app # 作業ディレクトリをコンテナ内の/my-appにマウントする。
     ports:
-      - "6000:6000" # ホストの3000ポートとコンテナの3000ポートを接続する。
+      - "7000:7000" # ホストの3000ポートとコンテナの3000ポートを接続する。
     depends_on:
       - db # 依存関係を表している。dbが起動してからwebが起動するという意味。
