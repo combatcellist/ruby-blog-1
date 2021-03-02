@@ -48,6 +48,7 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
+    @article = 
   end
 
 end
